@@ -36,6 +36,12 @@ public class AopdemoApplication {
 
 		// call the business method
 		theAccountDAO.addAccount();
+
+		// do it again!
+		System.out.println("\n Call Again!");
+
+		// call the business method again to verify that aspect is being executed.
+		theAccountDAO.addAccount();
 	}
 
 }
