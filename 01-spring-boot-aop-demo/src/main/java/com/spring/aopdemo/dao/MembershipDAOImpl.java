@@ -3,7 +3,7 @@ package com.spring.aopdemo.dao;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MembershipDAOImpl implements AccountDAO{
+public class MembershipDAOImpl implements MembershipDAO{
 
 
     @Override
