@@ -77,6 +77,7 @@ public class MyDemoLoggingAspect {
  */
 
 
+    /*
     // adding more params
     // wildcard(..) will match on any number of arguments
     @Before("execution(* add*(com.spring.aopdemo.Account, ..))")
@@ -84,6 +85,18 @@ public class MyDemoLoggingAspect {
 
         System.out.println("\n==> Executing @Before advice on method");
     }
+
+     */
+
+
+
+    // for matching on any parameter
+    @Before("execution(* add*(..))")
+    public void beforeAddAccountAdvice() {
+
+        System.out.println("\n==> Executing @Before advice on method");
+    }
+
 
 
 
