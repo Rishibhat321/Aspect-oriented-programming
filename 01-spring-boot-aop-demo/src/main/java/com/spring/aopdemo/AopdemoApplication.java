@@ -40,8 +40,11 @@ public class AopdemoApplication {
 	//	theAccountDAO.addAccount(myAccount);
 		theAccountDAO.addAccount(myAccount, true);
 
+		theAccountDAO.doWork();
+
 		// call the membership business method
 		theMembershipDAO.addSillyMember();
+		theMembershipDAO.goToSleep();
 
 	/*	// do it again!
 		System.out.println("\n Call Again!");

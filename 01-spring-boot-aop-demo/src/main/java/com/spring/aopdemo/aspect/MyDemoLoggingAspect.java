@@ -89,9 +89,23 @@ public class MyDemoLoggingAspect {
      */
 
 
-
+/*
     // for matching on any parameter
     @Before("execution(* add*(..))")
+    public void beforeAddAccountAdvice() {
+
+        System.out.println("\n==> Executing @Before advice on method");
+    }
+
+ */
+
+
+    // matching methods based on package name
+    // based on package name
+    // return type(*) wildcard
+    // package name
+    // .*.*(..) - for matching on any class, any method and (..) for any number of params
+    @Before("execution(*  com.spring.aopdemo.dao.*.*(..))")
     public void beforeAddAccountAdvice() {
 
         System.out.println("\n==> Executing @Before advice on method");
