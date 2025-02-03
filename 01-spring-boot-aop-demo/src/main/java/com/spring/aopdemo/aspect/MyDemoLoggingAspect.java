@@ -39,9 +39,20 @@ public class MyDemoLoggingAspect {
      */
 
 
+    /*
     // using wildcards
     // Match method starting with "add" in any class.
     @Before("execution(public void add*())")
+    public void beforeAddAccountAdvice() {
+
+        System.out.println("\n==> Executing @Before advice on method");
+    }
+     */
+
+
+    // Match methods based on return type
+    // Match on any modifier - *
+    @Before("execution(* void add*()")
     public void beforeAddAccountAdvice() {
 
         System.out.println("\n==> Executing @Before advice on method");
