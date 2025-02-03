@@ -52,7 +52,21 @@ public class MyDemoLoggingAspect {
 
     // Match methods based on return type
     // Match on any modifier - *
-    @Before("execution(* void add*()")
+  //  @Before("execution(* void add*()")
+    // Modifier is optional
+    /*
+    @Before("execution(void add*())")
+    public void beforeAddAccountAdvice() {
+
+        System.out.println("\n==> Executing @Before advice on method");
+    }
+
+     */
+
+
+
+    // Match on any return type
+    @Before("execution(* add*())")
     public void beforeAddAccountAdvice() {
 
         System.out.println("\n==> Executing @Before advice on method");
