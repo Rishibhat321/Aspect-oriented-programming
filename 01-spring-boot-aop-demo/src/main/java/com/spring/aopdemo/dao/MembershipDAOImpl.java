@@ -7,7 +7,7 @@ public class MembershipDAOImpl implements MembershipDAO{
 
 
     @Override
-    public void addAccount() {
+    public void addSillyAccount() {
 
         System.out.println(getClass() + ": Doing my DB Work: Adding a MEMBERSHIP ACCOUNT");
 

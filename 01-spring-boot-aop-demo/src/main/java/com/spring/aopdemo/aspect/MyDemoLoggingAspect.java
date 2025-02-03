@@ -25,11 +25,23 @@ public class MyDemoLoggingAspect {
      */
 
 
+    /*
     // if we want to apply @Before Advice only on specific method (for which we have 2 methods with the same name)
     // will match on interface or class that implements the interface
     // package name + class/interface name
     // advice will not be applied to membership interface(here)
     @Before("execution(public void com.spring.aopdemo.dao.AccountDAO.addAccount())")
+    public void beforeAddAccountAdvice() {
+
+        System.out.println("\n==> Executing @Before advice on method");
+    }
+
+     */
+
+
+    // using wildcards
+    // Match method starting with "add" in any class.
+    @Before("execution(public void add*)")
     public void beforeAddAccountAdvice() {
 
         System.out.println("\n==> Executing @Before advice on method");
