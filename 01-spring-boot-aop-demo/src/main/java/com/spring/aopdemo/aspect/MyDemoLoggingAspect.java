@@ -64,7 +64,7 @@ public class MyDemoLoggingAspect {
      */
 
 
-
+/*
     // Match on any return type
     // wildcard (*)
     // Parameter types with Pointcut Expression
@@ -73,5 +73,19 @@ public class MyDemoLoggingAspect {
 
         System.out.println("\n==> Executing @Before advice on method");
     }
+
+ */
+
+
+    // adding more params
+    // wildcard(..) will match on any number of arguments
+    @Before("execution(* add*(com.spring.aopdemo.Account, ..))")
+    public void beforeAddAccountAdvice() {
+
+        System.out.println("\n==> Executing @Before advice on method");
+    }
+
+
+
 
 }
