@@ -132,8 +132,9 @@ public class MyDemoLoggingAspect {
 
      */
 
+    // fully qualifies class name package name + class name
 
-    @Before("forDaoPackageNoGetterSetter()")
+    @Before("com.spring.aopdemo.aspect.AopExpressions.forDaoPackageNoGetterSetter()")
     public void beforeAddAccountAdvice() {
         System.out.println("\n==> Executing @Before advice on method");
 
