@@ -128,6 +128,12 @@ public class MyDemoLoggingAspect {
 
     }
 
+    // re-use pointcut declaration and applying to another advice.
+    @Before("forDaoPackage()")
+    public void performApiAnalytics() {
+        System.out.println("\n==> Performing API Analytics");
+    }
+
 
 
 
