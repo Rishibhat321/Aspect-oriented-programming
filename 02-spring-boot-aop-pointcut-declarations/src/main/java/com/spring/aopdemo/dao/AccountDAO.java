@@ -12,4 +12,13 @@ public interface AccountDAO {
 
     boolean doWork();
 
+    // allows to call the getter/setter methods via the AccountDAO interface
+    public String getName();
+
+    public void setName(String name);
+
+    public String getServiceCode();
+
+    public void setServiceCode(String serviceCode);
+
 }

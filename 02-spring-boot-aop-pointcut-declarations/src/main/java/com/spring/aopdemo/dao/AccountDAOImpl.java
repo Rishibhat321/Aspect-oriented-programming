@@ -30,5 +30,35 @@ public class AccountDAOImpl implements AccountDAO{
 
  */
 
+    // create fields to test Combining pointcut declarations(getters/setters)
+
+    private String name;
+    private String serviceCode;
+
+    // getters/setters
+
+
+    public String getName() {
+        System.out.println(getClass() + ": in getName()");
+        return name;
+    }
+
+    public void setName(String name) {
+        System.out.println(getClass() + ": in setName()");
+        this.name = name;
+    }
+
+    public String getServiceCode() {
+        System.out.println(getClass() +": in getServiceCode()");
+        return serviceCode;
+    }
+
+    public void setServiceCode(String serviceCode) {
+        System.out.println(getClass() +": in setServiceCode()");
+        this.serviceCode = serviceCode;
+    }
+
+    // adding statements just to make sure that the advices are being applied.
+
 
 }
