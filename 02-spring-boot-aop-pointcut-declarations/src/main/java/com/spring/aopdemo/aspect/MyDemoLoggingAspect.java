@@ -122,7 +122,7 @@ public class MyDemoLoggingAspect {
     private void forDaoPackage() {}
 
     // Applying pointcut to advice
-    @Before("forDaoPackage")
+    @Before("forDaoPackage()")
     public void beforeAddAccountAdvice() {
         System.out.println("\n==> Executing @Before advice on method");
 
