@@ -116,11 +116,6 @@ public class MyDemoLoggingAspect {
      */
 
 
-
-    // Pointcut Declarations
-    @Pointcut("execution(* com.spring.aopdemo.dao.*.*(..))")
-    private void forDaoPackage() {}
-
     /*
     // Applying pointcut to advice
     @Before("forDaoPackage()")
@@ -138,39 +133,11 @@ public class MyDemoLoggingAspect {
      */
 
 
-    // create a pointcut declaration for getter methods (.get*)
-    @Pointcut("execution(* com.spring.aopdemo.dao.*.get*(..))")
-    private void getter() {}
-
-    // create a pointcut for setter methods  (.set*)
-    @Pointcut("execution(* com.spring.aopdemo.dao.*.set*(..))")
-    private void setter() {}
-
-    // create a pointcut: include package and exclude getter/setter
-    // no advices will be applied on getter/setter methods
-    @Pointcut("forDaoPackage() && !(getter() || setter())")
-    private void forDaoPackageNoGetterSetter() {}
-
     @Before("forDaoPackageNoGetterSetter()")
     public void beforeAddAccountAdvice() {
         System.out.println("\n==> Executing @Before advice on method");
 
     }
-
-
-    @Before("forDaoPackageNoGetterSetter()")
-    public void performApiAnalytics() {
-        System.out.println("\n==> Performing API Analytics");
-    }
-
-
-    @Before("forDaoPackageNoGetterSetter()")
-    public void LogToCloudAsync() {
-        System.out.println("\n==> Logging to Cloud in async fashion");
-    }
-
-
-
 
 
 }
