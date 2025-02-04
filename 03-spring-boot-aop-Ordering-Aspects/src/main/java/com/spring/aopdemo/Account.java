@@ -6,6 +6,16 @@ public class Account {
     private String name;
     private String level;
 
+    // define constructors
+    public Account() {
+
+    }
+
+    public Account(String level, String name) {
+        this.level = level;
+        this.name = name;
+    }
+
     // getters/setters
     public String getLevel() {
         return level;
@@ -22,4 +32,15 @@ public class Account {
     public void setName(String name) {
         this.name = name;
     }
+
+    // define toString method
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "level='" + level + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
 }

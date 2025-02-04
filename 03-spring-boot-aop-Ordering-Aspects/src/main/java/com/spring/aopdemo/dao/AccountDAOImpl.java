@@ -35,9 +35,9 @@ public class AccountDAOImpl implements AccountDAO{
     private String name;
     private String serviceCode;
 
+
     // getters/setters
-
-
+    // adding statements just to make sure that the advices are being applied.
     public String getName() {
         System.out.println(getClass() + ": in getName()");
         return name;
@@ -57,8 +57,6 @@ public class AccountDAOImpl implements AccountDAO{
         System.out.println(getClass() +": in setServiceCode()");
         this.serviceCode = serviceCode;
     }
-
-    // adding statements just to make sure that the advices are being applied.
 
 
 }
