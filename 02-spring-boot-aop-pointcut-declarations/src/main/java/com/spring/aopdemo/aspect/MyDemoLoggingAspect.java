@@ -2,6 +2,7 @@ package com.spring.aopdemo.aspect;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Aspect
@@ -100,6 +101,7 @@ public class MyDemoLoggingAspect {
  */
 
 
+    /*
     // matching methods based on package name
     // based on package name
     // return type(*) wildcard
@@ -109,6 +111,21 @@ public class MyDemoLoggingAspect {
     public void beforeAddAccountAdvice() {
 
         System.out.println("\n==> Executing @Before advice on method");
+    }
+
+     */
+
+
+
+    // Pointcut Declarations
+    @Pointcut("execution(* com.spring.aopdemo.dao.*.*(..))")
+    private void forDaoPackage() {}
+
+    // Applying pointcut to advice
+    @Before("forDaoPackage")
+    public void beforeAddAccountAdvice() {
+        System.out.println("\n==> Executing @Before advice on method");
+
     }
 
 
