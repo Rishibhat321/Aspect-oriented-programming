@@ -2,6 +2,8 @@ package com.spring.aopdemo.dao;
 
 import com.spring.aopdemo.Account;
 
+import java.util.List;
+
 public interface AccountDAO {
 
   //  void addAccount(Account theAccount);
@@ -20,5 +22,8 @@ public interface AccountDAO {
     public String getServiceCode();
 
     public void setServiceCode(String serviceCode);
+
+    // add a new method: findAccounts()
+    List<Account> findAccounts();
 
 }
