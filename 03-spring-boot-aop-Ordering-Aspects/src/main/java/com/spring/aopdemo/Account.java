@@ -11,9 +11,9 @@ public class Account {
 
     }
 
-    public Account(String level, String name) {
-        this.level = level;
+    public Account(String name, String level) {
         this.name = name;
+        this.level = level;
     }
 
     // getters/setters
