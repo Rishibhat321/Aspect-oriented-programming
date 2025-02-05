@@ -14,6 +14,10 @@ import java.util.List;
 @Order(2)
 public class MyDemoLoggingAspect {
 
+    public void afterFinallyFindAccountAdvice(JoinPoint theJoinPoint) {
+
+    }
+
     @AfterThrowing(
             pointcut = "execution(* com.spring.aopdemo.dao.AccountDAO.findAccounts(..))",
             throwing = "theExc")
