@@ -14,7 +14,12 @@ import java.util.List;
 @Order(2)
 public class MyDemoLoggingAspect {
 
+    @After("execution(* com.spring.aopdemo.dao.AccountDAO.findAccounts(..))")
     public void afterFinallyFindAccountAdvice(JoinPoint theJoinPoint) {
+
+        // print out which method we are advising on
+        String method = theJoinPoint.getSignature().toShortString();
+        System.out.println("\n==> Executing @After (finally) on method: " + method);
 
     }
 
