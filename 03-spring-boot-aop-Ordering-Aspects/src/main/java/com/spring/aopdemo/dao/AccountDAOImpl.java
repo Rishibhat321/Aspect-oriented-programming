@@ -80,5 +80,10 @@ public class AccountDAOImpl implements AccountDAO{
         return myAccounts;
     }
 
+    @Override
+    public List<Account> findAccounts(boolean tripWire) {
+        return List.of();
+    }
+
 
 }
