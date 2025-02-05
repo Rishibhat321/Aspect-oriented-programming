@@ -49,7 +49,8 @@ public class AopdemoApplication {
 		// add try-catch for exception handling
 		try{
 			// add a boolean flag to simulate(throw) the exceptions
-			boolean tripWire = true;
+		//	boolean tripWire = true;
+			boolean tripWire = false;
 			theAccounts = theAccountDAO.findAccounts(tripWire);
 		}
 		catch (Exception exc) {
