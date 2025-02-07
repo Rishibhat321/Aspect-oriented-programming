@@ -28,7 +28,20 @@ public class MyDemoLoggingAspect {
         long begin = System.currentTimeMillis();
 
         // execute the method
-        Object result = theProceedingJoinPoint.proceed();
+        // this method may throw an exception so surround it with try-catch
+        Object result = null;
+
+        try{
+            result = theProceedingJoinPoint.proceed();
+        }
+        catch(Exception exc) {
+            // log the exception
+            System.out.println(exc.getMessage());
+
+            // give user a custom message
+            result = "Major accident!, but AOP is there to handle";
+            // the main application will never know that the exception happened., since a string result is being returned.
+        }
 
         // get end timestamp
         long end = System.currentTimeMillis();
