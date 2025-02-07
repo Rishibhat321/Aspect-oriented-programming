@@ -1,6 +1,8 @@
 package com.springboot.thymeleafdemo.aspect;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
@@ -24,4 +26,18 @@ public class DemoLoggingAspect {
     @Pointcut("execution(* com.springboot.thymeleafdemo.aspect.dao.*.*(..))")
     private void forDaoPackage() {}
 
+    // combine pointcuts
+    @Pointcut("forControllerPackage() || forServicePackage() || forDaoPackage() ")
+    private void forAppFlow() {}
+
+    // add @Before advice
+    @Before("forAppFlow()")
+    public void before(JoinPoint theJoinPoint) {
+
+        // display method we are calling
+
+        // display the arguments to the method
+
+
+    }
 }
