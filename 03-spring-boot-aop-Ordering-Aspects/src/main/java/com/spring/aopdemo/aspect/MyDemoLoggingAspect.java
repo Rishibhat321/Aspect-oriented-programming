@@ -38,9 +38,15 @@ public class MyDemoLoggingAspect {
             // log the exception
             System.out.println(exc.getMessage());
 
+            /*
             // give user a custom message
             result = "Major accident!, but AOP is there to handle";
             // the main application will never know that the exception happened., since a string result is being returned.
+             */
+
+
+            // rethrow exception
+            throw exc;
         }
 
         // get end timestamp
