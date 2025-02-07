@@ -58,8 +58,6 @@ public class AopdemoApplication {
 		boolean tripWire = true;
 		String data = theTrafficFortuneService.getFortune(tripWire);
 
-		String data = theTrafficFortuneService.getFortune();
-
 		System.out.println("\nMy fortune is: " + data);
 
 		System.out.println("Finished");
