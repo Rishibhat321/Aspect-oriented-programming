@@ -10,5 +10,5 @@ public class ThymeleafdemoApplication {
 		SpringApplication.run(ThymeleafdemoApplication.class, args);
 	}
 
-
+	
 }
